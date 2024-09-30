@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/favicon.png">
+    <title>MIC</title>
+    <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    <a class="navbar-brand" href="index.html">
+                        <b class="logo-icon p-l-8">
+                            <img src="assets/images/logo-icon.png" alt="homepage" class="light-logo">
+                           
+                        </b>
+                        <span class="logo-text">
+                             <img src="assets/images/logo.png" alt="homepage" class="light-logo">
+                            
+                        </span>
+                    </a>
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                    </ul>
+                    <ul class="navbar-nav float-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i>&nbsp;&nbsp;&nbsp;Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="p-t-30">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file-word-box"></i><span class="hide-menu">Edit Profile</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="basic.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Basic Details </span></a></li>
+                                <li class="sidebar-item"><a href="academic.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Academic Details </span></a></li>
+                                <li class="sidebar-item"><a href="exam.html" class="sidebar-link"><i class="mdi mdi-receipt"></i><span class="hide-menu"> Exam Details </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="bus.html" aria-expanded="false"><i class="mdi mdi-bus"></i><span class="hide-menu">Bus Booking</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="password.html" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Change Password</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper">
+             <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Academic Information</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Academic</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+
+
+
+                <div class="card">
+                <div class="card-body wizard-content">
+                <h6 class="card-subtitle"></h6>
+                <div class="card">
+                
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#acad" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-cup"></i><b> Prizes Awarded/Earned</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#home" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-desktop"></i><b> Projects Done</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-tablet"></i><b> Internship/Courses</b></span></a> </li>
+                
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#posting" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-book"></i><b> Co-Curricular</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#train" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-game"></i><b> Extra-Curricular</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#research" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Assessment Score</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#punish" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-medall-alt"></i><b> Placement Details</b></span></a> </li>
+                </ul>
+                
+                <div class="tab-content tabcontent-border">
+                
+                <div class="tab-pane active p-20" id="acad" role="tabpanel">
+                <div class="modal fade" id="pcadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Prize / Awards Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="pcadd2">
+                <div class="modal-body">
+                <div id="errorMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Name of the event *</label>
+                <input type="text" name="event" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Level *</label>
+                <select class="form-control" name="level" id="type" required="">
+                <option value="">Select type</option>
+                <option value="School Level">School Level</option>
+                <option value="College Level">College Level</option>
+                <option value="Zonal Level">Zonal Level</option>
+                <option value="State Level">State Level</option>
+                <option value="National Level">National Level</option>
+                <option value="International Level">International Level</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Organizer *</label>
+                <input type="text" name="organiser" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Prize *</label>
+                <select class="form-control" name="prize" id="type" required="">
+                <option value="">Select type</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Certificate*</label>
+                <label for="">(upload less than 2 mb)</label> <br>
+                <div class="input-group">
+                <input type="file" class="form-control custom-file-input" name="cert" id="uploadFile" onchange="if (!window.__cfRLUnblockHandlers) return false; return fileValidation2()" aria-describedby="inputGroupPrepend" required="">
+                <label class="custom-file-label" for="customFile">Choose file(Image)</label>
+                </div>
+                <p style="color:red;" id="tutorial"></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Add Data</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="modal fade" id="studentViewModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">View Prizes</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <div class="modal-body">
+                <img id="imagepr" src="" alt="prizes" class="center" style="width:80%;height:80%;">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Prizes / Awards Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pcadd" fdprocessedid="awyi5a">
+                Add Prize / Awards Details
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTablepr" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Name of the event</b></th>
+                <th><b>Level</b></th>
+                <th><b>Organizer</b></th>
+                <th><b>Prize</b></th>
+                <th><b>View</b></th>
+                <th align="center"><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="tab-pane p-20" id="home" role="tabpanel">
+                
+                <div class="modal fade" id="projectadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Project Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="saveproject">
+                <div class="modal-body">
+                <div id="errorMessagepost" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="">Semester *</label>
+                <select class="form-control" name="sem" id="cs" required="">
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Title of the Project *</label>
+                <input type="text" name="ti" class="form-control" required="">
+                </div>
+                <div class="mb-3">
+                <label for="">Github Link *</label>
+                <input type="text" name="gl" class="form-control" required="">
+                </div>
+                <div class="mb-3">
+                <label for="">Remarks *</label>
+                <input type="text" name="rm" class="form-control" required="">
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Project Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectadd">
+                Add Project
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTable0" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Semester</b></th>
+                <th><b>Title of the project</b></th>
+                <th><b>Github link</b></th>
+                <th><b>Remarks</b></th>
+                <th><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>Haitatsu - Phase I</td>
+                <td>https://github.com/jayanthansenthilkumar</td>
+                <td>Implementing Through Web Page</td>
+                <td>
+                
+                <button type="button" value="4756" class="deletePrBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>Haitatsu - Phase II</td>
+                <td>https://github.com/jayanthansenthilkumar</td>
+                <td>Implementing Through Web Page and GPS Module</td>
+                <td>
+                
+                <button type="button" value="4757" class="deletePrBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="tab-pane  p-20" id="profile" role="tabpanel">
+                <div class="modal fade" id="iadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Internship / Course Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="iadd2">
+                <div class="modal-body">
+                <div id="errorMessagei" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Name of the Program / Title *</label>
+                <input type="text" name="event" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Type *</label>
+                <select class="form-control" name="type" id="type" required="">
+                <option value="">Select type</option>
+                <option value="Internship">Internship</option>
+                <option value="Course">Course</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Organizer *</label>
+                <input type="text" name="organiser" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Duration *</label>
+                <input type="text" name="dur" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Remarks *</label>
+                <input type="text" name="rem" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Certificate*</label>
+                <label for="">(upload less than 2 mb)</label> <br>
+                <div class="input-group">
+                <input type="file" class="form-control custom-file-input" name="cert" id="uploadFile" onchange="if (!window.__cfRLUnblockHandlers) return false; return fileValidation2()" aria-describedby="inputGroupPrepend" required="">
+                <label class="custom-file-label" for="customFile">Choose file(Image)</label>
+                </div>
+                <p style="color:red;" id="tutorial"></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Add Data</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="modal fade" id="studentViewModali" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">View Certificate</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <div class="modal-body">
+                <img id="imagei" src="" alt="prizes" class="center" style="width:80%;height:80%;">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Internship / Course Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#iadd">
+                Add Internship / Course Details
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTablei" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Name of the Program / Title</b></th>
+                <th><b>Type</b></th>
+                <th><b>Organizer</b></th>
+                <th><b>Duration</b></th>
+                <th><b>Remarks</b></th>
+                <th><b>View</b></th>
+                <th align="center"><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>The Joy of Computing with Python</td>
+                <td>Course</td>
+                <td>NPTEL</td>
+                <td>12 Weeks</td>
+                <td>Learning some new Invention</td>
+                <td align="center"><button type="button" id="ledonof" value="5763" class="btnimgi btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModali">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="5763" class="deleteiBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Python for Data Science</td>
+                <td>Course</td>
+                <td>NPTEL</td>
+                <td>4 Weeks</td>
+                <td>Data Science</td>
+                <td align="center"><button type="button" id="ledonof" value="5764" class="btnimgi btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModali">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="5764" class="deleteiBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane  p-20" id="posting" role="tabpanel">
+                
+                <div class="modal fade" id="postingadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Co-Curricular Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="savepost">
+                <div class="modal-body">
+                <div id="errorMessagepost" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Name of the event *</label>
+                <input type="text" name="event" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Level *</label>
+                <select class="form-control" name="level" id="type" required="">
+                <option value="">Select type</option>
+                <option value="School Level">School Level</option>
+                <option value="College Level">College Level</option>
+                <option value="Zonal Level">Zonal Level</option>
+                <option value="State Level">State Level</option>
+                <option value="National Level">National Level</option>
+                <option value="International Level">International Level</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Organizer *</label>
+                <input type="text" name="organiser" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Prize *</label>
+                <select class="form-control" name="prize" id="type" required="">
+                <option value="">Select type</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="Participation">Participation</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Certificate*</label>
+                <label for="">(upload less than 2 mb)</label> <br>
+                <div class="input-group">
+                <input type="file" class="form-control custom-file-input" name="cert" id="uploadFile" onchange="if (!window.__cfRLUnblockHandlers) return false; return fileValidation2()" aria-describedby="inputGroupPrepend" required="">
+                <label class="custom-file-label" for="customFile">Choose file(Image)</label>
+                </div>
+                <p style="color:red;" id="tutorial"></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="modal fade" id="studentViewModalco" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">View Certificate</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <div class="modal-body">
+                <img id="imageco" src="" alt="Co-Curricular" class="center" style="width:80%;height:80%;">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Co-Curricular Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postingadd">
+                Add Co-Curricular
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTablecc" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Name of the event</b></th>
+                <th><b>Level</b></th>
+                <th><b>Organizer</b></th>
+                <th><b>Prize</b></th>
+                <th><b>View</b></th>
+                <th align="center"><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>Conference</td>
+                <td>National Level</td>
+                <td>Karpagam Acadamy of Higher Education</td>
+                <td>Participation</td>
+                <td align="center"><button type="button" id="ledonof" value="4618" class="btnimgco btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModalco">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="4618" class="deletecoBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Blind Presentation</td>
+                <td>National Level</td>
+                <td>SRM Eswari Engineering College</td>
+                <td>Participation</td>
+                <td align="center"><button type="button" id="ledonof" value="4620" class="btnimgco btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModalco">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="4620" class="deletecoBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>Code Mantra</td>
+                <td>National Level</td>
+                <td>Bannari Amman Institute of Technology</td>
+                <td>Participation</td>
+                <td align="center"><button type="button" id="ledonof" value="4621" class="btnimgco btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModalco">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="4621" class="deletecoBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>Paper Presentation</td>
+                <td>National Level</td>
+                <td>Bannari Amman Institute of Technology</td>
+                <td>Participation</td>
+                <td align="center"><button type="button" id="ledonof" value="4622" class="btnimgco btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModalco">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="4622" class="deletecoBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>Code Puzzle</td>
+                <td>National Level</td>
+                <td>KGISL Institute of technology</td>
+                <td>Participation</td>
+                <td align="center"><button type="button" id="ledonof" value="4623" class="btnimgco btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#studentViewModalco">View</button></td>
+                <td align="center">
+                
+                <button type="button" value="4623" class="deletecoBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane  p-20" id="punish" role="tabpanel">
+                
+                <div class="modal fade" id="placeadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Placement Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="saveplace">
+                <div class="modal-body">
+                <div id="errorMessagep" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Date *</label>
+                <input type="date" name="dt" class="form-control" required="">
+                </div>
+                <div class="mb-3">
+                <label for="">Name of the Company *</label>
+                <input type="text" name="nc" class="form-control" required="">
+                </div>
+                <div class="mb-3">
+                <label for="">Designation &amp; Salary Package</label>
+                <input type="text" name="ds" class="form-control" required="">
+                </div>
+                <div class="mb-3">
+                <label for="">Result *</label>
+                <select class="form-control" name="pr" id="type" required="">
+                <option value="">Select type</option>
+                <option value="Selected">Selected</option>
+                <option value="Not Selected">Not Selected</option>
+                </select>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Placement Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#placeadd">
+                Add Placement
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTablep" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Date</b></th>
+                <th><b>Name of the Company</b></th>
+                <th><b>Designation &amp; Salary Package</b></th>
+                <th><b>Performance / Result</b></th>
+                <th align="center"><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane p-20" id="train" role="tabpanel">
+                <div class="modal fade" id="extraadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Extra-Curricular Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="saveextra">
+                <div class="modal-body">
+                <div id="errorMessagepost" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Name of the event *</label>
+                <input type="text" name="event" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Level *</label>
+                <select class="form-control" name="level" id="type" required="">
+                <option value="">Select type</option>
+                <option value="School Level">School Level</option>
+                <option value="College Level">College Level</option>
+                <option value="Zonal Level">Zonal Level</option>
+                <option value="State Level">State Level</option>
+                <option value="National Level">National Level</option>
+                <option value="International Level">International Level</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Organizer *</label>
+                <input type="text" name="organiser" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Prize *</label>
+                <select class="form-control" name="prize" id="type" required="">
+                <option value="">Select type</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="Participation">Participation</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Certificate*</label>
+                <label for="">(upload less than 2 mb)</label> <br>
+                <div class="input-group">
+                <input type="file" class="form-control custom-file-input" name="cert" id="uploadFile" onchange="if (!window.__cfRLUnblockHandlers) return false; return fileValidation2()" aria-describedby="inputGroupPrepend" required="">
+                <label class="custom-file-label" for="customFile">Choose file(Image)</label>
+                </div>
+                <p style="color:red;" id="tutorial"></p>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="modal fade" id="studentViewModalex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">View Certificate</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <div class="modal-body">
+                <img id="imageex" src="" alt="Co-Curricular" class="center" style="width:80%;height:80%;">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Extra-Curricular Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#extraadd">
+                Add Extra-Curricular
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTableex" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Name of the event</b></th>
+                <th><b>Level</b></th>
+                <th><b>Organizer</b></th>
+                <th><b>Prize</b></th>
+                <th><b>View</b></th>
+                <th align="center"><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane p-20" id="research" role="tabpanel">
+                <div class="modal fade" id="cpadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Assessment Score</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="savecp">
+                <div class="modal-body">
+                <div id="errorMessagecp" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Date *</label>
+                <input type="Date" name="dt" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">HackerRank *</label>
+                <input type="text" name="hr" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">SkillRack/Codetantra *</label>
+                <input type="text" name="sr" class="form-control">
+                </div>
+                <div class="mb-3">
+                <label for="">Other</label>
+                <input type="text" name="ict" placeholder="Ex: Codechef:80" class="form-control">
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Assessment Score Details
+                <button type="button" style="float: right;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cpadd">
+                Add Assessment Score
+                </button>
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTablecp" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>S.No</b></th>
+                <th><b>Date</b></th>
+                <th><b>HackerRank</b></th>
+                <th><b>SkillRack/Codetantra</b></th>
+                <th><b>Other</b></th>
+                <th><b>Action Taken</b></th>
+                <th align="center"><b>Action</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>2024-05-26</td>
+                <td>800 Points</td>
+                <td>Java : 100%</td>
+                <td>Codechef : 20</td>
+                <td></td>
+                <td align="center">
+                <button type="button" value="2359" class="deletecpBtn btn btn-danger  btn-sm">Delete</button>
+                <button type="button" value="" class="btn btn-warning btn-sm">Pending</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>2024-05-02</td>
+                <td>800 Points</td>
+                <td>Java : 100%</td>
+                <td>Codechef : 10</td>
+                <td></td>
+                <td align="center">
+                <button type="button" value="2355" class="deletecpBtn btn btn-danger  btn-sm">Delete</button>
+                <button type="button" value="" class="btn btn-warning btn-sm">Pending</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                </div>
+                </div>
+                
+                </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+            <footer class="footer text-center">
+                <b>
+                    2024 © M.Kumarasamy College of Engineering All Rights Reserved.<br>
+                    Developed and Maintained by Technology Innovation Hub.
+                </b>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <script src="assets/libs/flot/excanvas.js"></script>
+    <script src="assets/libs/flot/jquery.flot.js"></script>
+    <script src="assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="dist/js/pages/chart/chart-page-init.js"></script>
+</body>
+</html>

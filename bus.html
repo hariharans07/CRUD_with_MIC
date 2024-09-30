@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>MIC</title>
+    <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    <a class="navbar-brand" href="index.html">
+                        <b class="logo-icon p-l-8">
+                            <img src="assets/images/logo-icon.png" alt="homepage" class="light-logo">
+                           
+                        </b>
+                        <span class="logo-text">
+                             <img src="assets/images/logo.png" alt="homepage" class="light-logo">
+                            
+                        </span>
+                    </a>
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                    </ul>
+                    <ul class="navbar-nav float-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i>&nbsp;&nbsp;&nbsp;Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="p-t-30">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file-word-box"></i><span class="hide-menu">Edit Profile</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="basic.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Basic Details </span></a></li>
+                                <li class="sidebar-item"><a href="academic.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Academic Details </span></a></li>
+                                <li class="sidebar-item"><a href="exam.html" class="sidebar-link"><i class="mdi mdi-receipt"></i><span class="hide-menu"> Exam Details </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="bus.html" aria-expanded="false"><i class="mdi mdi-bus"></i><span class="hide-menu">Bus Booking</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="password.html" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Change Password</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper">
+             <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Seat Reservation</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Bus Booking</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+
+
+
+
+
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body wizard-content">
+                        <div class="card-body">
+                            <h4 class="card-title">Generate Pass</h4><br><br>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-2 text-right control-label col-form-label">Graduate Level</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select form-control" id="graduate" name="graduate" required="" fdprocessedid="gxca8v">
+                                    <option value="UG">UG</option>
+                                    <option value="PG">PG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lname" class="col-sm-2 text-right control-label col-form-label">Select year</label>
+                                <div class="col-sm-9">
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="year" id="1st_year" value="I" required="">
+                                    <label class="form-check-label" for="1st_year">I</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="year" id="2nd_year" value="II">
+                                    <label class="form-check-label" for="2nd_year">II</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="year" id="3rd_year" value="III">
+                                    <label class="form-check-label" for="3rd_year">III</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="year" id="4th_year" value="IV">
+                                    <label class="form-check-label" for="4th_year">IV</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-2 text-right control-label col-form-label">Select Semester</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select form-control" id="graduate" name="graduate" required="" fdprocessedid="gxca8v">
+                                    <option value="I">I</option>
+                                    <option value="II">II</option>
+                                    <option value="III">III</option>
+                                    <option value="IV">IV</option>
+                                    <option value="V">V</option>
+                                    <option value="VI">VI</option>
+                                    <option value="VII">VII</option>
+                                    <option value="VIII">VIII</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-2 text-right control-label col-form-label">Route Number</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select form-control" id="graduate" name="graduate" required="" fdprocessedid="gxca8v">
+                                    <option value="UG">My Route</option>
+                                    <option value="UG">UG</option>
+                                    <option value="PG">PG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="fname" class="col-sm-2 text-right control-label col-form-label">Stage Name</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select form-control" id="graduate" name="graduate" required="" fdprocessedid="gxca8v">
+                                    <option value="UG">My Stage</option>
+                                    <option value="UG">UG</option>
+                                    <option value="PG">PG</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row align-items-center">
+                                <label class="col-sm-1 control-label col-form-label"></label>
+                                <div class="col-sm-12">
+                                <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="agreeTerms" required="">
+                                <label class="form-check-label" for="agreeTerms">I agree to the Terms and Conditions <span class="text-danger">*</span></label>
+                                </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-success">Book my Seat</button>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer text-center">
+                <b>
+                    2024 © M.Kumarasamy College of Engineering All Rights Reserved.<br>
+                    Developed and Maintained by Technology Innovation Hub.
+                </b>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <script src="assets/libs/flot/excanvas.js"></script>
+    <script src="assets/libs/flot/jquery.flot.js"></script>
+    <script src="assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="dist/js/pages/chart/chart-page-init.js"></script>
+</body>
+</html>

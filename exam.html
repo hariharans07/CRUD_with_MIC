@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>MIC</title>
+    <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div id="main-wrapper">
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    <a class="navbar-brand" href="index.html">
+                        <b class="logo-icon p-l-8">
+                            <img src="assets/images/logo-icon.png" alt="homepage" class="light-logo">
+                           
+                        </b>
+                        <span class="logo-text">
+                             <img src="assets/images/logo.png" alt="homepage" class="light-logo">
+                            
+                        </span>
+                    </a>
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                    </ul>
+                    <ul class="navbar-nav float-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i>&nbsp;&nbsp;&nbsp;Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="p-t-30">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file-word-box"></i><span class="hide-menu">Edit Profile</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="basic.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Basic Details </span></a></li>
+                                <li class="sidebar-item"><a href="academic.html" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Academic Details </span></a></li>
+                                <li class="sidebar-item"><a href="exam.html" class="sidebar-link"><i class="mdi mdi-receipt"></i><span class="hide-menu"> Exam Details </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="bus.html" aria-expanded="false"><i class="mdi mdi-bus"></i><span class="hide-menu">Bus Booking</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="password.html" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Change Password</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper">
+             <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Exam Information</h4>
+                        <div class="ml-auto text-right">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Exam</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+
+
+
+                <div class="card">
+                <div class="card-body wizard-content">
+                <h4 class="card-title">Academic Exam Information</h4>
+                <h6 class="card-subtitle"></h6>
+                <div class="card">
+                
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#sem1" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 1</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem2" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 2</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem3" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 3</b></span></a> </li>
+                
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem4" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 4</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem5" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 5</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem6" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 6</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem7" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 7</b></span></a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#sem8" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down"><i class="ti-pencil-alt"></i><b> Semester 8</b></span></a> </li>
+                </ul>
+                
+                <div class="modal fade" id="sem1SG" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">GPA /CGPA / Attendance </h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem1SGf">
+                <div class="modal-body">
+                <div id="sem1SGMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3">
+                <label for="">Semester *</label>
+                <select class="form-control" name="sem" id="sem" required="">
+                <option value="">Select Semester</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label for="">Select *</label>
+                <select class="form-control" name="type" id="type" required="">
+                <option value="">Select</option>
+                <option value="sgpa">GPA</option>
+                <option value="cgpa">CGPA</option>
+                <option value="ca">Current Arrear</option>
+                <option value="oa">Overall Arrear</option>
+                <option value="ms1a">MS1-Attendance</option>
+                <option value="ms2a">MS2-Attendance</option>
+                <option value="ova">Overall-Attendance</option>
+                </select>
+                </div>
+                <div class="mb-3" id="sg">
+                <label for="SGPA">GPA* : </label>
+                <input type="text" name="sgpa" class="form-control">
+                </div>
+                <div class="mb-3" id="cg">
+                <label for="CGPA">CGPA* : </label>
+                <input type="text" name="cgpa" class="form-control">
+                </div>
+                <div class="mb-3" id="ca">
+                <label for="CA">Current Arrear* : </label>
+                <input type="text" name="ca" class="form-control">
+                </div>
+                <div class="mb-3" id="oa">
+                <label for="OA">Overall Arrear* : </label>
+                <input type="text" name="oa" class="form-control">
+                </div>
+                <div class="mb-3" id="ms1">
+                <label for="SGPA">MS1-Attendance* : </label>
+                <input type="text" name="ms1" class="form-control">
+                </div>
+                <div class="mb-3" id="ms2">
+                <label for="SGPA">MS2-Attendance* : </label>
+                <input type="text" name="ms2" class="form-control">
+                </div>
+                <div class="mb-3" id="ova">
+                <label for="SGPA">Overall-Attendance* : </label>
+                <input type="text" name="ova" class="form-control">
+                </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save </button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-content tabcontent-border">
+                
+                <div class="tab-pane active p-20" id="sem1" role="tabpanel">
+                <div class="modal fade" id="subadd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 1 Exam Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="pcex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="ms1ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="s1ms1">
+                <div class="modal-body">
+                <div id="s1ms1Message" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH101J - Technical English ">18LEH101J - Technical English </label><input type="text" class="form-control" name="8854" required=""></div><div class="mb-3"><label for="18MAB101T - Calculus and Linear Algebra">18MAB101T - Calculus and Linear Algebra</label><input type="text" class="form-control" name="8855" required=""></div><div class="mb-3"><label for="18CYB101J - Chemistry">18CYB101J - Chemistry</label><input type="text" class="form-control" name="8856" required=""></div><div class="mb-3"><label for="18EES101J(R) - Basic Electrical and Electronics Engineering">18EES101J(R) - Basic Electrical and Electronics Engineering</label><input type="text" class="form-control" name="8857" required=""></div><div class="mb-3"><label for="18CSS101J(R) - Programming for Problem Solving">18CSS101J(R) - Programming for Problem Solving</label><input type="text" class="form-control" name="8858" required=""></div><div class="mb-3"><label for="18MBH102L - General Aptitude">18MBH102L - General Aptitude</label><input type="text" class="form-control" name="8859" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="ms1ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="s1ms2">
+                <div class="modal-body">
+                <div id="s1ms2Message" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH101J - Technical English ">18LEH101J - Technical English </label><input type="text" class="form-control" name="8854" required=""></div><div class="mb-3"><label for="18MAB101T - Calculus and Linear Algebra">18MAB101T - Calculus and Linear Algebra</label><input type="text" class="form-control" name="8855" required=""></div><div class="mb-3"><label for="18CYB101J - Chemistry">18CYB101J - Chemistry</label><input type="text" class="form-control" name="8856" required=""></div><div class="mb-3"><label for="18EES101J(R) - Basic Electrical and Electronics Engineering">18EES101J(R) - Basic Electrical and Electronics Engineering</label><input type="text" class="form-control" name="8857" required=""></div><div class="mb-3"><label for="18CSS101J(R) - Programming for Problem Solving">18CSS101J(R) - Programming for Problem Solving</label><input type="text" class="form-control" name="8858" required=""></div><div class="mb-3"><label for="18MBH102L - General Aptitude">18MBH102L - General Aptitude</label><input type="text" class="form-control" name="8859" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="ms1prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="s1prep">
+                <div class="modal-body">
+                <div id="s1prepMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH101J - Technical English ">18LEH101J - Technical English </label><input type="text" class="form-control" name="8854" required=""></div><div class="mb-3"><label for="18MAB101T - Calculus and Linear Algebra">18MAB101T - Calculus and Linear Algebra</label><input type="text" class="form-control" name="8855" required=""></div><div class="mb-3"><label for="18CYB101J - Chemistry">18CYB101J - Chemistry</label><input type="text" class="form-control" name="8856" required=""></div><div class="mb-3"><label for="18EES101J(R) - Basic Electrical and Electronics Engineering">18EES101J(R) - Basic Electrical and Electronics Engineering</label><input type="text" class="form-control" name="8857" required=""></div><div class="mb-3"><label for="18CSS101J(R) - Programming for Problem Solving">18CSS101J(R) - Programming for Problem Solving</label><input type="text" class="form-control" name="8858" required=""></div><div class="mb-3"><label for="18MBH102L - General Aptitude">18MBH102L - General Aptitude</label><input type="text" class="form-control" name="8859" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="ms1sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="s1sem">
+                <div class="modal-body">
+                <div id="s1semMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH101J - Technical English ">18LEH101J - Technical English </label><input type="text" class="form-control" name="8854" required=""></div><div class="mb-3"><label for="18MAB101T - Calculus and Linear Algebra">18MAB101T - Calculus and Linear Algebra</label><input type="text" class="form-control" name="8855" required=""></div><div class="mb-3"><label for="18CYB101J - Chemistry">18CYB101J - Chemistry</label><input type="text" class="form-control" name="8856" required=""></div><div class="mb-3"><label for="18EES101J(R) - Basic Electrical and Electronics Engineering">18EES101J(R) - Basic Electrical and Electronics Engineering</label><input type="text" class="form-control" name="8857" required=""></div><div class="mb-3"><label for="18CSS101J(R) - Programming for Problem Solving">18CSS101J(R) - Programming for Problem Solving</label><input type="text" class="form-control" name="8858" required=""></div><div class="mb-3"><label for="18MBH102L - General Aptitude">18MBH102L - General Aptitude</label><input type="text" class="form-control" name="8859" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 1 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="myTables1ms1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#subadd" fdprocessedid="bxxlrb">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ms1ms1" fdprocessedid="ule1gd">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ms1ms2" fdprocessedid="rxrdbp">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ms1prep" fdprocessedid="9aoak5">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ms1sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>18LEH101J - Technical English </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="8854" class="deletes1Btn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>18MAB101T - Calculus and Linear Algebra</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="8855" class="deletes1Btn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>18CYB101J - Chemistry</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="8856" class="deletes1Btn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>18EES101J(R) - Basic Electrical and Electronics Engineering</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="8857" class="deletes1Btn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>18CSS101J(R) - Programming for Problem Solving</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="8858" class="deletes1Btn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>6</td>
+                <td>18MBH102L - General Aptitude</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="8859" class="deletes1Btn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem1sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>7.7</td>
+                <td>7.7</td>
+                <td>0</td>
+                <td>0</td>
+                <td>98.59</td>
+                <td>98.59</td>
+                <td align="center">98.59</td>
+                </tr>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG" fdprocessedid="dowtio">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="tab-pane p-20" id="sem2" role="tabpanel">
+                <div class="modal fade" id="sem2madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 2 Exam Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem2fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container2">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input2">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form2">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem2ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem2fms1">
+                <div class="modal-body">
+                <div id="sem2fms1Message" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH102J - Professional English">18LEH102J - Professional English</label><input type="text" class="form-control" name="7969" required=""></div><div class="mb-3"><label for="18MAB102T - Advanced Calculus and Complex Analysis">18MAB102T - Advanced Calculus and Complex Analysis</label><input type="text" class="form-control" name="7970" required=""></div><div class="mb-3"><label for="18PYB101J - Physics">18PYB101J - Physics</label><input type="text" class="form-control" name="7971" required=""></div><div class="mb-3"><label for="18MES101J(R) - Engineering Graphics">18MES101J(R) - Engineering Graphics</label><input type="text" class="form-control" name="7972" required=""></div><div class="mb-3"><label for="18MES102J - Basic Civil and Mechanical Engineering">18MES102J - Basic Civil and Mechanical Engineering</label><input type="text" class="form-control" name="7973" required=""></div><div class="mb-3"><label for="18AIC101J - Python Programming">18AIC101J - Python Programming</label><input type="text" class="form-control" name="7974" required=""></div><div class="mb-3"><label for="18MBH101L - Professional Skills and Practices">18MBH101L - Professional Skills and Practices</label><input type="text" class="form-control" name="7975" required=""></div><div class="mb-3"><label for="18LEH103T - Heritage of Tamil">18LEH103T - Heritage of Tamil</label><input type="text" class="form-control" name="7976" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem2ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem2ms2f">
+                <div class="modal-body">
+                <div id="sem2ms2fMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH102J - Professional English">18LEH102J - Professional English</label><input type="text" class="form-control" name="7969" required=""></div><div class="mb-3"><label for="18MAB102T - Advanced Calculus and Complex Analysis">18MAB102T - Advanced Calculus and Complex Analysis</label><input type="text" class="form-control" name="7970" required=""></div><div class="mb-3"><label for="18PYB101J - Physics">18PYB101J - Physics</label><input type="text" class="form-control" name="7971" required=""></div><div class="mb-3"><label for="18MES101J(R) - Engineering Graphics">18MES101J(R) - Engineering Graphics</label><input type="text" class="form-control" name="7972" required=""></div><div class="mb-3"><label for="18MES102J - Basic Civil and Mechanical Engineering">18MES102J - Basic Civil and Mechanical Engineering</label><input type="text" class="form-control" name="7973" required=""></div><div class="mb-3"><label for="18AIC101J - Python Programming">18AIC101J - Python Programming</label><input type="text" class="form-control" name="7974" required=""></div><div class="mb-3"><label for="18MBH101L - Professional Skills and Practices">18MBH101L - Professional Skills and Practices</label><input type="text" class="form-control" name="7975" required=""></div><div class="mb-3"><label for="18LEH103T - Heritage of Tamil">18LEH103T - Heritage of Tamil</label><input type="text" class="form-control" name="7976" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem2prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem2prepf">
+                <div class="modal-body">
+                <div id="sem2prepfMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH102J - Professional English">18LEH102J - Professional English</label><input type="text" class="form-control" name="7969" required=""></div><div class="mb-3"><label for="18MAB102T - Advanced Calculus and Complex Analysis">18MAB102T - Advanced Calculus and Complex Analysis</label><input type="text" class="form-control" name="7970" required=""></div><div class="mb-3"><label for="18PYB101J - Physics">18PYB101J - Physics</label><input type="text" class="form-control" name="7971" required=""></div><div class="mb-3"><label for="18MES101J(R) - Engineering Graphics">18MES101J(R) - Engineering Graphics</label><input type="text" class="form-control" name="7972" required=""></div><div class="mb-3"><label for="18MES102J - Basic Civil and Mechanical Engineering">18MES102J - Basic Civil and Mechanical Engineering</label><input type="text" class="form-control" name="7973" required=""></div><div class="mb-3"><label for="18AIC101J - Python Programming">18AIC101J - Python Programming</label><input type="text" class="form-control" name="7974" required=""></div><div class="mb-3"><label for="18MBH101L - Professional Skills and Practices">18MBH101L - Professional Skills and Practices</label><input type="text" class="form-control" name="7975" required=""></div><div class="mb-3"><label for="18LEH103T - Heritage of Tamil">18LEH103T - Heritage of Tamil</label><input type="text" class="form-control" name="7976" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem2sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem2semf">
+                <div class="modal-body">
+                <div id="sem2semfMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18LEH102J - Professional English">18LEH102J - Professional English</label><input type="text" class="form-control" name="7969" required=""></div><div class="mb-3"><label for="18MAB102T - Advanced Calculus and Complex Analysis">18MAB102T - Advanced Calculus and Complex Analysis</label><input type="text" class="form-control" name="7970" required=""></div><div class="mb-3"><label for="18PYB101J - Physics">18PYB101J - Physics</label><input type="text" class="form-control" name="7971" required=""></div><div class="mb-3"><label for="18MES101J(R) - Engineering Graphics">18MES101J(R) - Engineering Graphics</label><input type="text" class="form-control" name="7972" required=""></div><div class="mb-3"><label for="18MES102J - Basic Civil and Mechanical Engineering">18MES102J - Basic Civil and Mechanical Engineering</label><input type="text" class="form-control" name="7973" required=""></div><div class="mb-3"><label for="18AIC101J - Python Programming">18AIC101J - Python Programming</label><input type="text" class="form-control" name="7974" required=""></div><div class="mb-3"><label for="18MBH101L - Professional Skills and Practices">18MBH101L - Professional Skills and Practices</label><input type="text" class="form-control" name="7975" required=""></div><div class="mb-3"><label for="18LEH103T - Heritage of Tamil">18LEH103T - Heritage of Tamil</label><input type="text" class="form-control" name="7976" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 2 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem2table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem2madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem2ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem2ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem2prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem2sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>18LEH102J - Professional English</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7969" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>18MAB102T - Advanced Calculus and Complex Analysis</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7970" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>18PYB101J - Physics</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7971" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>18MES101J(R) - Engineering Graphics</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7972" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>18MES102J - Basic Civil and Mechanical Engineering</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7973" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>6</td>
+                <td>18AIC101J - Python Programming</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7974" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>7</td>
+                <td>18MBH101L - Professional Skills and Practices</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7975" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>8</td>
+                <td>18LEH103T - Heritage of Tamil</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7976" class="sem2deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem2sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>8.125</td>
+                <td>7.99</td>
+                <td>0</td>
+                <td>0</td>
+                <td>95.69</td>
+                <td>98.59</td>
+                <td align="center">96.99</td>
+                </tr>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="tab-pane  p-20" id="sem3" role="tabpanel">
+                <div class="modal fade" id="sem3madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 3 Subject Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem3fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container3">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input3">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form3">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem3ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem3fms1">
+                <div class="modal-body">
+                <div id="sem3fms1Message" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB207T - Probability and Statistics">18MAB207T - Probability and Statistics</label><input type="text" class="form-control" name="10151" required=""></div><div class="mb-3"><label for="18AMC201T - Principles of Artificial Intelligence">18AMC201T - Principles of Artificial Intelligence</label><input type="text" class="form-control" name="10152" required=""></div><div class="mb-3"><label for="18AMC202J - Object Oriented Programming using Java">18AMC202J - Object Oriented Programming using Java</label><input type="text" class="form-control" name="10153" required=""></div><div class="mb-3"><label for="18AMC203T - Data Structures using C++">18AMC203T - Data Structures using C++</label><input type="text" class="form-control" name="10154" required=""></div><div class="mb-3"><label for="18AMC204T - Computer Organization and Architecture">18AMC204T - Computer Organization and Architecture</label><input type="text" class="form-control" name="10155" required=""></div><div class="mb-3"><label for="18AMC205T - Fundamentals of Operating Systems">18AMC205T - Fundamentals of Operating Systems</label><input type="text" class="form-control" name="10156" required=""></div><div class="mb-3"><label for="18LEH104T - Tamils and Technology">18LEH104T - Tamils and Technology</label><input type="text" class="form-control" name="10163" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem3ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem3ms2f">
+                <div class="modal-body">
+                <div id="sem3ms2fMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB207T - Probability and Statistics">18MAB207T - Probability and Statistics</label><input type="text" class="form-control" name="10151" required=""></div><div class="mb-3"><label for="18AMC201T - Principles of Artificial Intelligence">18AMC201T - Principles of Artificial Intelligence</label><input type="text" class="form-control" name="10152" required=""></div><div class="mb-3"><label for="18AMC202J - Object Oriented Programming using Java">18AMC202J - Object Oriented Programming using Java</label><input type="text" class="form-control" name="10153" required=""></div><div class="mb-3"><label for="18AMC203T - Data Structures using C++">18AMC203T - Data Structures using C++</label><input type="text" class="form-control" name="10154" required=""></div><div class="mb-3"><label for="18AMC204T - Computer Organization and Architecture">18AMC204T - Computer Organization and Architecture</label><input type="text" class="form-control" name="10155" required=""></div><div class="mb-3"><label for="18AMC205T - Fundamentals of Operating Systems">18AMC205T - Fundamentals of Operating Systems</label><input type="text" class="form-control" name="10156" required=""></div><div class="mb-3"><label for="18LEH104T - Tamils and Technology">18LEH104T - Tamils and Technology</label><input type="text" class="form-control" name="10163" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem3prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem3prepf">
+                <div class="modal-body">
+                <div id="sem3prepfMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB207T - Probability and Statistics">18MAB207T - Probability and Statistics</label><input type="text" class="form-control" name="10151" required=""></div><div class="mb-3"><label for="18AMC201T - Principles of Artificial Intelligence">18AMC201T - Principles of Artificial Intelligence</label><input type="text" class="form-control" name="10152" required=""></div><div class="mb-3"><label for="18AMC202J - Object Oriented Programming using Java">18AMC202J - Object Oriented Programming using Java</label><input type="text" class="form-control" name="10153" required=""></div><div class="mb-3"><label for="18AMC203T - Data Structures using C++">18AMC203T - Data Structures using C++</label><input type="text" class="form-control" name="10154" required=""></div><div class="mb-3"><label for="18AMC204T - Computer Organization and Architecture">18AMC204T - Computer Organization and Architecture</label><input type="text" class="form-control" name="10155" required=""></div><div class="mb-3"><label for="18AMC205T - Fundamentals of Operating Systems">18AMC205T - Fundamentals of Operating Systems</label><input type="text" class="form-control" name="10156" required=""></div><div class="mb-3"><label for="18LEH104T - Tamils and Technology">18LEH104T - Tamils and Technology</label><input type="text" class="form-control" name="10163" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem3sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem3semf">
+                <div class="modal-body">
+                <div id="sem3semfMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB207T - Probability and Statistics">18MAB207T - Probability and Statistics</label><input type="text" class="form-control" name="10151" required=""></div><div class="mb-3"><label for="18AMC201T - Principles of Artificial Intelligence">18AMC201T - Principles of Artificial Intelligence</label><input type="text" class="form-control" name="10152" required=""></div><div class="mb-3"><label for="18AMC202J - Object Oriented Programming using Java">18AMC202J - Object Oriented Programming using Java</label><input type="text" class="form-control" name="10153" required=""></div><div class="mb-3"><label for="18AMC203T - Data Structures using C++">18AMC203T - Data Structures using C++</label><input type="text" class="form-control" name="10154" required=""></div><div class="mb-3"><label for="18AMC204T - Computer Organization and Architecture">18AMC204T - Computer Organization and Architecture</label><input type="text" class="form-control" name="10155" required=""></div><div class="mb-3"><label for="18AMC205T - Fundamentals of Operating Systems">18AMC205T - Fundamentals of Operating Systems</label><input type="text" class="form-control" name="10156" required=""></div><div class="mb-3"><label for="18LEH104T - Tamils and Technology">18LEH104T - Tamils and Technology</label><input type="text" class="form-control" name="10163" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 3 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem3table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem3madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem3ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem3ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem3prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem3sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>18MAB207T - Probability and Statistics</td>
+                <td>23</td>
+                <td>32</td>
+                <td>63</td>
+                <td align="center">A</td>
+                <td align="center">
+                <button type="button" value="10151" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>18AMC201T - Principles of Artificial Intelligence</td>
+                <td>33</td>
+                <td>32</td>
+                <td>71</td>
+                <td align="center">A</td>
+                <td align="center">
+                <button type="button" value="10152" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>18AMC202J - Object Oriented Programming using Java</td>
+                <td>33</td>
+                <td>41</td>
+                <td>71</td>
+                <td align="center">A+</td>
+                <td align="center">
+                <button type="button" value="10153" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>18AMC203T - Data Structures using C++</td>
+                <td>33</td>
+                <td>25</td>
+                <td>68</td>
+                <td align="center">A</td>
+                <td align="center">
+                <button type="button" value="10154" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>18AMC204T - Computer Organization and Architecture</td>
+                <td>36</td>
+                <td>36</td>
+                <td>65</td>
+                <td align="center">O</td>
+                <td align="center">
+                <button type="button" value="10155" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>6</td>
+                <td>18AMC205T - Fundamentals of Operating Systems</td>
+                <td>30</td>
+                <td>26</td>
+                <td>71</td>
+                <td align="center">B+</td>
+                <td align="center">
+                <button type="button" value="10156" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>7</td>
+                <td>18LEH104T - Tamils and Technology</td>
+                <td>50</td>
+                <td>42</td>
+                <td>92</td>
+                <td align="center">A+</td>
+                <td align="center">
+                <button type="button" value="10163" class="sem3deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem3sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>8.52</td>
+                <td>8.12</td>
+                <td>0</td>
+                <td>0</td>
+                <td>98.94</td>
+                <td>98.94</td>
+                <td align="center">98.94</td>
+                </tr>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane  p-20" id="sem4" role="tabpanel">
+                <div class="modal fade" id="sem4madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 4 Subject Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem4fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container4">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input4">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form4">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem4ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem4fms1">
+                <div class="modal-body">
+                <div id="sem4fms1Message" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB206T - Discrete Mathematics">18MAB206T - Discrete Mathematics</label><input type="text" class="form-control" name="7174" required=""></div><div class="mb-3"><label for="18AMC208T - Machine Learning Algorithms">18AMC208T - Machine Learning Algorithms</label><input type="text" class="form-control" name="7175" required=""></div><div class="mb-3"><label for="18AMC209T - Internet Programming">18AMC209T - Internet Programming</label><input type="text" class="form-control" name="7176" required=""></div><div class="mb-3"><label for="18AMC210T - Database Management Systems">18AMC210T - Database Management Systems</label><input type="text" class="form-control" name="7177" required=""></div><div class="mb-3"><label for="18AMC211T - Design and Analysis of Algorithms">18AMC211T - Design and Analysis of Algorithms</label><input type="text" class="form-control" name="7178" required=""></div><div class="mb-3"><label for="18AMC212T - Software Engineering">18AMC212T - Software Engineering</label><input type="text" class="form-control" name="7179" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem4ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem4ms2f">
+                <div class="modal-body">
+                <div id="sem4ms2fMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB206T - Discrete Mathematics">18MAB206T - Discrete Mathematics</label><input type="text" class="form-control" name="7174" required=""></div><div class="mb-3"><label for="18AMC208T - Machine Learning Algorithms">18AMC208T - Machine Learning Algorithms</label><input type="text" class="form-control" name="7175" required=""></div><div class="mb-3"><label for="18AMC209T - Internet Programming">18AMC209T - Internet Programming</label><input type="text" class="form-control" name="7176" required=""></div><div class="mb-3"><label for="18AMC210T - Database Management Systems">18AMC210T - Database Management Systems</label><input type="text" class="form-control" name="7177" required=""></div><div class="mb-3"><label for="18AMC211T - Design and Analysis of Algorithms">18AMC211T - Design and Analysis of Algorithms</label><input type="text" class="form-control" name="7178" required=""></div><div class="mb-3"><label for="18AMC212T - Software Engineering">18AMC212T - Software Engineering</label><input type="text" class="form-control" name="7179" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem4prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem4prepf">
+                <div class="modal-body">
+                <div id="sem4prepfMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB206T - Discrete Mathematics">18MAB206T - Discrete Mathematics</label><input type="text" class="form-control" name="7174" required=""></div><div class="mb-3"><label for="18AMC208T - Machine Learning Algorithms">18AMC208T - Machine Learning Algorithms</label><input type="text" class="form-control" name="7175" required=""></div><div class="mb-3"><label for="18AMC209T - Internet Programming">18AMC209T - Internet Programming</label><input type="text" class="form-control" name="7176" required=""></div><div class="mb-3"><label for="18AMC210T - Database Management Systems">18AMC210T - Database Management Systems</label><input type="text" class="form-control" name="7177" required=""></div><div class="mb-3"><label for="18AMC211T - Design and Analysis of Algorithms">18AMC211T - Design and Analysis of Algorithms</label><input type="text" class="form-control" name="7178" required=""></div><div class="mb-3"><label for="18AMC212T - Software Engineering">18AMC212T - Software Engineering</label><input type="text" class="form-control" name="7179" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem4sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem4semf">
+                <div class="modal-body">
+                <div id="sem4semfMessage" class="alert alert-warning d-none"></div>
+                <div class="mb-3"><label for="18MAB206T - Discrete Mathematics">18MAB206T - Discrete Mathematics</label><input type="text" class="form-control" name="7174" required=""></div><div class="mb-3"><label for="18AMC208T - Machine Learning Algorithms">18AMC208T - Machine Learning Algorithms</label><input type="text" class="form-control" name="7175" required=""></div><div class="mb-3"><label for="18AMC209T - Internet Programming">18AMC209T - Internet Programming</label><input type="text" class="form-control" name="7176" required=""></div><div class="mb-3"><label for="18AMC210T - Database Management Systems">18AMC210T - Database Management Systems</label><input type="text" class="form-control" name="7177" required=""></div><div class="mb-3"><label for="18AMC211T - Design and Analysis of Algorithms">18AMC211T - Design and Analysis of Algorithms</label><input type="text" class="form-control" name="7178" required=""></div><div class="mb-3"><label for="18AMC212T - Software Engineering">18AMC212T - Software Engineering</label><input type="text" class="form-control" name="7179" required=""></div> </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 4 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem4table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem4madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem4ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem4ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem4prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem4sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>18MAB206T - Discrete Mathematics</td>
+                <td>44</td>
+                <td>34</td>
+                <td>50</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7174" class="sem4deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>18AMC208T - Machine Learning Algorithms</td>
+                <td>34</td>
+                <td>34</td>
+                <td>64</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7175" class="sem4deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>18AMC209T - Internet Programming</td>
+                <td>46</td>
+                <td>46</td>
+                <td>96</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7176" class="sem4deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>4</td>
+                <td>18AMC210T - Database Management Systems</td>
+                <td>39</td>
+                <td>35</td>
+                <td>79</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7177" class="sem4deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>5</td>
+                <td>18AMC211T - Design and Analysis of Algorithms</td>
+                <td>33</td>
+                <td>26</td>
+                <td>50</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7178" class="sem4deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                <tr>
+                <td>6</td>
+                <td>18AMC212T - Software Engineering</td>
+                <td>37</td>
+                <td>30</td>
+                <td>72</td>
+                <td align="center"></td>
+                <td align="center">
+                <button type="button" value="7179" class="sem4deleteBtn btn btn-danger btn-sm">Delete</button>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem4sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>94.23</td>
+                <td>96</td>
+                <td align="center">95.45</td>
+                </tr>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane  p-20" id="sem5" role="tabpanel">
+                <div class="modal fade" id="sem5madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 5 Subject Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem5fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container5">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input5">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form5">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem5ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem5fms1">
+                <div class="modal-body">
+                <div id="sem5fms1Message" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem5ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem5ms2f">
+                <div class="modal-body">
+                <div id="sem5ms2fMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem5prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem5prepf">
+                <div class="modal-body">
+                <div id="sem5prepfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem5sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem5semf">
+                <div class="modal-body">
+                <div id="sem5semfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 5 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem5table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem5madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem5ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem5ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem5prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem5sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem5sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane p-20" id="sem6" role="tabpanel">
+                <div class="modal fade" id="sem6madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 6 Subject Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem6fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container6">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input6">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form6">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem6ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem6fms1">
+                <div class="modal-body">
+                <div id="sem6fms1Message" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem6ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem6ms2f">
+                <div class="modal-body">
+                <div id="sem6ms2fMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem6prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem6prepf">
+                <div class="modal-body">
+                <div id="sem6prepfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem6sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem6semf">
+                <div class="modal-body">
+                <div id="sem6semfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 6 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem6table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem6madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem6ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem6ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem6prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem6sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem6sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="tab-pane p-20" id="sem7" role="tabpanel">
+                <div class="modal fade" id="sem7madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 7 Subject Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem7fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container7">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input7">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form7">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem7ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem7fms1">
+                <div class="modal-body">
+                <div id="sem7fms1Message" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem7ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem7ms2f">
+                <div class="modal-body">
+                <div id="sem7ms2fMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem7prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem7prepf">
+                <div class="modal-body">
+                <div id="sem7prepfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem7sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem7semf">
+                <div class="modal-body">
+                <div id="sem7semfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 7 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem7table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem7madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem7ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem7ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem7prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem7sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem7sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="tab-pane p-20" id="sem8" role="tabpanel">
+                <div class="modal fade" id="sem8madd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Add Semester 8 Subject Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem8fex">
+                <div class="modal-body">
+                <div id="sem1Message" class="alert alert-warning d-none"></div>
+                <div id="input-container8">
+                <div class="mb-3">
+                <input type="text" class="form-control" name="dynamic_input[]" placeholder="Subject 1">
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="add-input8">Add Subject</button>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="submit-form8">Submit</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="modal fade" id="sem8ms1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 1 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem8fms1">
+                <div class="modal-body">
+                <div id="sem8fms1Message" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem8ms2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> MS 2 Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem8ms2f">
+                <div class="modal-body">
+                <div id="sem8ms2fMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem8prep" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Preparatory Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem8prepf">
+                <div class="modal-body">
+                <div id="sem8prepfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="modal fade" id="sem8sem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Semester Mark Details</h5>
+                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="mdi mdi-close"></i> 
+                </button>
+                </div>
+                <form id="sem8semf">
+                <div class="modal-body">
+                <div id="sem8semfMessage" class="alert alert-warning d-none"></div>
+                </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-md">Update details</button>
+                </div>
+                </form>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>Semester 8 Exam Details
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem8table" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th rowspan="2" class="centered-text"><b>S.No</b></th>
+                <th><b>Subject Name</b></th>
+                <th><b>MS 1</b></th>
+                <th><b>MS 2</b></th>
+                <th><b>Preparatory</b></th>
+                <th><b>Semester</b></th>
+                <th rowspan="2" align="center"><b>Action</b></th>
+                </tr>
+                <tr>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem8madd">
+                Add Subject</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem8ms1">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem8ms2">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem8prep">
+                Enter Mark</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sem8sem">
+                Enter Mark</button></td>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                <div class="col-md-12">
+                <div class="card">
+                <div class="card-header">
+                <h4>GPA /CGPA / Attendance
+                
+                </h4>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                <table id="sem8sgpa" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                <th><b>GPA</b></th>
+                <th><b>CGPA</b></th>
+                <th><b>Current Arrear</b></th>
+                <th><b>Overall Arrear</b></th>
+                <th><b>MS 1-Attendance</b></th>
+                <th><b>MS 2-Attendance</b></th>
+                <th><b>Overall-Attendance</b></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td colspan="8"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sem1SG">
+                Enter</button></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                </div>
+            <footer class="footer text-center">
+                <b>
+                    2024 © M.Kumarasamy College of Engineering All Rights Reserved.<br>
+                    Developed and Maintained by Technology Innovation Hub.
+                </b>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="dist/js/waves.js"></script>
+    <script src="dist/js/sidebarmenu.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <script src="assets/libs/flot/excanvas.js"></script>
+    <script src="assets/libs/flot/jquery.flot.js"></script>
+    <script src="assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="dist/js/pages/chart/chart-page-init.js"></script>
+</body>
+</html>
